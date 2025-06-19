@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "kyc-data-api-collection",
+		"name": "KYC Data API",
+		"description": "Collection for testing the KYC Data API endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create KYC Data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"fullName\": \"John Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"gender\": \"Male\",\n  \"age\": 30,\n  \"occupation\": \"Software Engineer\",\n  \"monthlyIncome\": 5000.00,\n  \"savings\": 25000.00,\n  \"investments\": 15000.00,\n  \"investmentGoal\": \"Retirement\",\n  \"riskTolerance\": \"Moderate\",\n  \"investmentTimeline\": \"10-15 years\",\n  \"shortTermGoal\": \"Emergency fund\",\n  \"longTermGoal\": \"Financial independence\",\n  \"investmentStyle\": \"Diversified\",\n  \"preferredContact\": \"Email\",\n  \"profileScore\": 75,\n  \"profileRank\": \"Gold\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/kyc-data",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"kyc-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All KYC Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/kyc-data",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"kyc-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get KYC Data by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/kyc-data/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"kyc-data",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update KYC Data",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"fullName\": \"John Doe Updated\",\n  \"email\": \"john.doe.updated@example.com\",\n  \"gender\": \"Male\",\n  \"age\": 31,\n  \"occupation\": \"Senior Software Engineer\",\n  \"monthlyIncome\": 5500.00,\n  \"savings\": 30000.00,\n  \"investments\": 20000.00,\n  \"investmentGoal\": \"Retirement\",\n  \"riskTolerance\": \"Moderate\",\n  \"investmentTimeline\": \"10-15 years\",\n  \"shortTermGoal\": \"Emergency fund\",\n  \"longTermGoal\": \"Financial independence\",\n  \"investmentStyle\": \"Diversified\",\n  \"preferredContact\": \"Email\",\n  \"profileScore\": 80,\n  \"profileRank\": \"Platinum\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/kyc-data/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"kyc-data",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete KYC Data",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/kyc-data/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"kyc-data",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create KYC Data - Validation Error",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"age\": 15\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/kyc-data",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"kyc-data"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+} 
