@@ -27,15 +27,12 @@ public class KYCDataRequest {
     private String occupation;
     
     @DecimalMin(value = "0.0", inclusive = false, message = "Monthly income must be greater than 0")
-    @Digits(integer = 10, fraction = 2, message = "Monthly income must have at most 10 digits before decimal and 2 after")
     private BigDecimal monthlyIncome;
     
     @DecimalMin(value = "0.0", inclusive = true, message = "Savings must be non-negative")
-    @Digits(integer = 10, fraction = 2, message = "Savings must have at most 10 digits before decimal and 2 after")
     private BigDecimal savings;
     
     @DecimalMin(value = "0.0", inclusive = true, message = "Investments must be non-negative")
-    @Digits(integer = 10, fraction = 2, message = "Investments must have at most 10 digits before decimal and 2 after")
     private BigDecimal investments;
     
     @Size(max = 50, message = "Investment goal must not exceed 50 characters")
