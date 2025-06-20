@@ -15,7 +15,10 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/v1/kyc-data")
-@CrossOrigin(origins = "https://wealthmindai.netlify.app")
+@CrossOrigin(origins = {
+        "http://localhost:4200",
+        "https://wealthmindai.netlify.app"
+})
 public class KYCDataController {
 
     @Autowired
